@@ -41,9 +41,9 @@ export default function ProductDetail() {
         description={product.tagline}
       />
 
-      <section className="bg-cream-50 pt-10 lg:pt-14">
+      <section className="bg-cream-50 pt-8 lg:pt-14">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
-          <nav className="flex items-center gap-2 text-xs text-charcoal-500 tracking-wide mb-8">
+          <nav className="flex items-center gap-2 text-xs text-charcoal-500 tracking-wide mb-6 sm:mb-8 overflow-x-auto no-scrollbar whitespace-nowrap">
             <Link to="/" className="hover:text-solaire-600">Home</Link>
             <CaretRight size={11} />
             <Link to="/shop" className="hover:text-solaire-600">Shop</Link>
@@ -62,7 +62,7 @@ export default function ProductDetail() {
             <span className="text-charcoal-800 truncate">{product.name}</span>
           </nav>
 
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16">
             {/* Gallery */}
             <div>
               <div className="relative aspect-[4/5] bg-cream-200 overflow-hidden">
@@ -109,22 +109,22 @@ export default function ProductDetail() {
                   {collection.name}
                 </p>
               )}
-              <h1 className="mt-2 font-display text-4xl sm:text-5xl text-charcoal-900 leading-[1.05]">
+              <h1 className="mt-2 font-display text-3xl sm:text-5xl text-charcoal-900 leading-[1.08] sm:leading-[1.05]">
                 {product.name}
               </h1>
-              <p className="mt-3 font-display italic text-lg text-charcoal-600">
+              <p className="mt-3 font-display italic text-base sm:text-lg text-charcoal-600">
                 {product.tagline}
               </p>
 
-              <p className="mt-6 font-display text-3xl text-charcoal-900">
+              <p className="mt-5 sm:mt-6 font-display text-3xl text-charcoal-900">
                 ${product.price}
               </p>
 
-              <p className="mt-6 text-charcoal-600 leading-relaxed text-[15px] max-w-xl">
+              <p className="mt-5 sm:mt-6 text-charcoal-600 leading-relaxed text-[15px] max-w-xl">
                 {product.description}
               </p>
 
-              <div className="mt-8">
+              <div className="mt-7 sm:mt-8">
                 <p className="text-[11px] tracking-[0.2em] uppercase text-charcoal-500 mb-3">
                   Finish
                 </p>
@@ -140,7 +140,7 @@ export default function ProductDetail() {
                 </div>
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-3">
+              <div className="mt-7 sm:mt-8 flex flex-col sm:flex-row gap-3">
                 <a
                   href={product.whatsapp}
                   target="_blank"
@@ -160,27 +160,27 @@ export default function ProductDetail() {
               </div>
 
               {/* Trust row */}
-              <div className="mt-8 grid grid-cols-3 gap-3 pt-8 border-t border-cream-300">
+              <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-3 pt-7 sm:pt-8 border-t border-cream-300">
                 <div className="flex flex-col items-center text-center gap-1.5 text-charcoal-600">
                   <Truck size={20} className="text-solaire-600" />
-                  <span className="text-[11px] tracking-wide">
+                  <span className="text-[10px] sm:text-[11px] tracking-wide leading-tight">
                     Nationwide delivery
                   </span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-1.5 text-charcoal-600">
                   <ShieldCheck size={20} className="text-solaire-600" />
-                  <span className="text-[11px] tracking-wide">2-year warranty</span>
+                  <span className="text-[10px] sm:text-[11px] tracking-wide leading-tight">2-year warranty</span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-1.5 text-charcoal-600">
                   <CheckCircle size={20} className="text-solaire-600" />
-                  <span className="text-[11px] tracking-wide">
+                  <span className="text-[10px] sm:text-[11px] tracking-wide leading-tight">
                     Tested before ship
                   </span>
                 </div>
               </div>
 
               {/* Specs */}
-              <div className="mt-10">
+              <div className="mt-9 sm:mt-10">
                 <p className="text-[11px] tracking-[0.2em] uppercase text-charcoal-500 mb-4">
                   Specifications
                 </p>
@@ -188,13 +188,13 @@ export default function ProductDetail() {
                   {Object.entries(product.specs).map(([k, v]) => (
                     <div
                       key={k}
-                      className="py-3 grid grid-cols-[120px_1fr] gap-4 text-sm"
+                      className="py-3 grid grid-cols-[110px_1fr] sm:grid-cols-[120px_1fr] gap-3 sm:gap-4 text-sm"
                     >
                       <dt className="text-charcoal-500 capitalize">{k}</dt>
                       <dd className="text-charcoal-800">{v}</dd>
                     </div>
                   ))}
-                  <div className="py-3 grid grid-cols-[120px_1fr] gap-4 text-sm">
+                  <div className="py-3 grid grid-cols-[110px_1fr] sm:grid-cols-[120px_1fr] gap-3 sm:gap-4 text-sm">
                     <dt className="text-charcoal-500">SKU</dt>
                     <dd className="text-charcoal-800 font-mono">{product.sku}</dd>
                   </div>
@@ -206,16 +206,16 @@ export default function ProductDetail() {
       </section>
 
       {related.length > 0 && (
-        <section className="bg-cream-100 mt-24 py-20 lg:py-24 relative">
+        <section className="bg-cream-100 mt-16 sm:mt-24 py-14 sm:py-20 lg:py-24 relative">
           <div className="grain" />
           <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10">
             <SectionReveal>
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-10">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8 sm:mb-10">
                 <div>
-                  <p className="font-accent text-2xl text-solaire-600">
+                  <p className="font-accent text-xl sm:text-2xl text-solaire-600">
                     pairs beautifully
                   </p>
-                  <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal-900 leading-[1.05]">
+                  <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl text-charcoal-900 leading-[1.08] sm:leading-[1.05]">
                     You may also like
                   </h2>
                 </div>
@@ -228,7 +228,7 @@ export default function ProductDetail() {
                 </Link>
               </div>
             </SectionReveal>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
               {related.map((p, i) => (
                 <SectionReveal key={p.slug} delay={i * 60}>
                   <ProductCard product={p} />

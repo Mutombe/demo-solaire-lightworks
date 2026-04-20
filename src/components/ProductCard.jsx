@@ -60,7 +60,7 @@ export default function ProductCard({ product }) {
         )}
       </Link>
 
-      <div className="pt-4 flex flex-col gap-2.5">
+      <div className="pt-3 sm:pt-4 flex flex-col gap-2.5">
         <div className="flex items-center gap-1.5">
           {product.finishes.slice(0, 4).map((f) => (
             <span
@@ -72,9 +72,9 @@ export default function ProductCard({ product }) {
           ))}
         </div>
 
-        <div className="flex items-start justify-between gap-3">
+        <div className="flex items-start justify-between gap-2 sm:gap-3">
           <div className="min-w-0">
-            <h3 className="font-display text-lg text-charcoal-900 leading-tight">
+            <h3 className="font-display text-base sm:text-lg text-charcoal-900 leading-tight">
               <Link
                 to={`/shop/${product.slug}`}
                 className="hover:text-solaire-600 transition-colors"
@@ -86,24 +86,24 @@ export default function ProductCard({ product }) {
               {product.tagline}
             </p>
           </div>
-          <span className="font-display text-lg text-charcoal-900 shrink-0">
+          <span className="font-display text-base sm:text-lg text-charcoal-900 shrink-0">
             ${product.price}
           </span>
         </div>
 
-        <div className="flex items-center gap-2 mt-1">
+        <div className="flex flex-col sm:flex-row items-stretch gap-2 mt-1">
           <a
             href={product.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-1.5 flex-1 bg-solaire-500 text-white text-xs tracking-wide py-2 hover:bg-solaire-600 transition-colors"
+            className="flex items-center justify-center gap-1.5 flex-1 bg-solaire-500 text-white text-xs tracking-wide py-2.5 sm:py-2 hover:bg-solaire-600 transition-colors"
           >
             <WhatsappLogo size={13} weight="fill" />
             WhatsApp
           </a>
           <a
             href={product.email}
-            className="flex items-center justify-center gap-1.5 flex-1 border border-charcoal-800 text-charcoal-800 text-xs tracking-wide py-2 hover:bg-charcoal-800 hover:text-cream-50 transition-colors"
+            className="flex items-center justify-center gap-1.5 flex-1 border border-charcoal-800 text-charcoal-800 text-xs tracking-wide py-2.5 sm:py-2 hover:bg-charcoal-800 hover:text-cream-50 transition-colors"
           >
             <EnvelopeSimple size={13} />
             Email

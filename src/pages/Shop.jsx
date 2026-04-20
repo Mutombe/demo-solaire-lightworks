@@ -182,9 +182,9 @@ export default function Shop() {
       />
 
       {/* Breadcrumb + title */}
-      <section className="bg-cream-50 pt-10 pb-8 lg:pt-14 lg:pb-10 border-b border-cream-300">
+      <section className="bg-cream-50 pt-8 pb-8 lg:pt-14 lg:pb-10 border-b border-cream-300">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
-          <nav className="flex items-center gap-2 text-xs text-charcoal-500 tracking-wide mb-4">
+          <nav className="flex items-center gap-2 text-xs text-charcoal-500 tracking-wide mb-4 overflow-x-auto no-scrollbar whitespace-nowrap">
             <Link to="/" className="hover:text-solaire-600">Home</Link>
             <CaretRight size={11} />
             <span className="text-charcoal-800">Shop</span>
@@ -199,10 +199,10 @@ export default function Shop() {
           </nav>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
-              <p className="font-accent text-2xl text-solaire-600">
+              <p className="font-accent text-xl sm:text-2xl text-solaire-600">
                 everything in the studio
               </p>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-charcoal-900 leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-charcoal-900 leading-[1.08] sm:leading-[1.05]">
                 Shop the collection
               </h1>
             </div>
@@ -214,12 +214,12 @@ export default function Shop() {
         </div>
       </section>
 
-      <section className="bg-cream-50 py-12 lg:py-16">
+      <section className="bg-cream-50 py-10 sm:py-12 lg:py-16">
         <div className="max-w-[1400px] mx-auto px-5 lg:px-10">
-          <div className="flex items-center justify-between gap-4 mb-8">
+          <div className="flex items-center justify-between gap-3 mb-6 sm:mb-8">
             <button
               onClick={() => setMobileFiltersOpen(true)}
-              className="lg:hidden inline-flex items-center gap-2 border border-charcoal-300 px-4 py-2.5 text-sm"
+              className="lg:hidden inline-flex items-center gap-2 border border-charcoal-300 px-4 py-3 text-sm"
             >
               <FunnelSimple size={16} />
               Filters
@@ -230,7 +230,7 @@ export default function Shop() {
                 <select
                   value={sort}
                   onChange={(e) => setSort(e.target.value)}
-                  className="appearance-none pl-4 pr-9 py-2.5 border border-charcoal-300 bg-cream-50 text-sm text-charcoal-800 focus:border-solaire-500 outline-none"
+                  className="appearance-none pl-4 pr-9 py-3 sm:py-2.5 border border-charcoal-300 bg-cream-50 text-base sm:text-sm text-charcoal-800 focus:border-solaire-500 outline-none"
                 >
                   {SORT_OPTIONS.map((o) => (
                     <option key={o.id} value={o.id}>
@@ -262,13 +262,13 @@ export default function Shop() {
                   </p>
                   <button
                     onClick={clearAll}
-                    className="mt-6 inline-flex items-center gap-2 bg-solaire-500 text-white px-5 py-2.5 text-xs tracking-[0.14em] uppercase"
+                    className="mt-6 inline-flex items-center gap-2 bg-solaire-500 text-white px-5 py-3 text-xs tracking-[0.14em] uppercase"
                   >
                     Clear filters
                   </button>
                 </div>
               ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8 lg:gap-10">
                   {filtered.map((p, i) => (
                     <SectionReveal key={p.slug} delay={Math.min(i, 8) * 40}>
                       <ProductCard product={p} />

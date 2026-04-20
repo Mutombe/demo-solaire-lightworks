@@ -64,8 +64,8 @@ export default function SearchModal({ open, onClose }) {
             ref={inputRef}
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder="Try 'brass', 'pendant', 'bedside'…"
-            className="w-full pl-10 pr-4 py-5 bg-transparent border-b border-charcoal-300 focus:border-solaire-500 outline-none text-3xl sm:text-4xl font-display italic text-charcoal-900 placeholder:text-charcoal-300"
+            placeholder="Try 'brass', 'pendant'…"
+            className="w-full pl-10 pr-4 py-4 sm:py-5 bg-transparent border-b border-charcoal-300 focus:border-solaire-500 outline-none text-2xl sm:text-4xl font-display italic text-charcoal-900 placeholder:text-charcoal-300"
           />
         </div>
 

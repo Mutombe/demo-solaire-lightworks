@@ -49,15 +49,15 @@ export default function Navbar({ onOpenSearch }) {
             : 'bg-cream-50/95 backdrop-blur-md border-b border-cream-300'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-5 lg:px-10 h-20 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3 group">
+        <div className="max-w-[1400px] mx-auto px-4 sm:px-5 lg:px-10 h-20 flex items-center justify-between gap-3">
+          <Link to="/" className="flex items-center gap-2.5 sm:gap-3 group min-w-0">
             <img
               src={business.logo}
               alt={business.name}
-              className="h-8 w-auto"
+              className="h-11 sm:h-12 w-auto shrink-0"
               loading="eager"
             />
-            <span className="font-display text-[20px] tracking-tight text-charcoal-900 hidden sm:block">
+            <span className="font-display text-[17px] sm:text-[20px] leading-none tracking-tight text-charcoal-900 truncate">
               {business.name}
             </span>
           </Link>

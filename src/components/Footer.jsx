@@ -13,12 +13,12 @@ import { business, collections } from '../data/siteData';
 export default function Footer() {
   const waHref = `https://wa.me/${business.whatsapp.replace(/[^0-9]/g, '')}`;
   return (
-    <footer className="relative bg-cream-100 border-t border-cream-300 mt-24">
+    <footer className="relative bg-cream-100 border-t border-cream-300 mt-16 sm:mt-24">
       <div className="grain" />
-      <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="relative max-w-[1400px] mx-auto px-5 lg:px-10 py-12 sm:py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12">
           {/* Brand */}
-          <div className="space-y-5">
+          <div className="col-span-2 lg:col-span-1 space-y-5">
             <Link to="/" className="flex items-center gap-3">
               <img
                 src={business.logo}
@@ -161,7 +161,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 pt-8 border-t border-cream-300 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-charcoal-500">
+        <div className="mt-12 sm:mt-14 pt-7 sm:pt-8 border-t border-cream-300 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-3 text-xs text-charcoal-500 text-center sm:text-left">
           <p>
             © 2026 {business.name} · Lighting curated in Harare.
           </p>
